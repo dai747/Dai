@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daftar Scammer di Rucoy online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>Daftar Scammer di Rucoy online</header>
+
+  <section id="login-container" aria-label="Form login pengguna">
+    <h2>Website Buatan Dai</h2>
+    
+    <form id="login-form" autocomplete="off" aria-describedby="login-error">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required autocomplete="username" aria-required="true" />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required autocomplete="current-password" aria-required="true" />
+      <div id="login-error" role="alert" aria-live="assertive"></div>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section id="app-container" aria-label="Aplikasi daftar orang setelah login" hidden>
+    <div id="welcome-text">
+      Halo, <span id="current-user"></span>! <span id="role-badge"></span>
+      <button id="logout-btn" aria-label="Keluar dari aplikasi">Logout</button>
+    </div>
+
+    <form id="add-person-form" autocomplete="off" aria-label="Form tambah orang" hidden>
+      <input type="text" id="person-name" placeholder="Masukkan nama orang" required aria-required="true" />
+      <button type="submit">Tambah</button>
+    </form>
+
+    <section id="people-container" aria-live="polite" aria-label="Daftar orang menurut kategori huruf"></section>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
